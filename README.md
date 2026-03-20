@@ -465,3 +465,6 @@ POST http://localhost:8000/verify                    → citizen verification
 GET  http://localhost:8000/network/graph             → operator network JSON
 ```
 
+
+
+Frontend notes incoming
