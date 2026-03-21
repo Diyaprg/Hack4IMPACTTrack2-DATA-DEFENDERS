@@ -1,0 +1,7 @@
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "env": {
+    "VITE_API_URL": "@suraksh_api_url",
+    "VITE_POCKETBASE_URL": "@suraksh_pb_url"
+  }
+}
