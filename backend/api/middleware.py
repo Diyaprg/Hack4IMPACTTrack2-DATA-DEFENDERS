@@ -17,9 +17,8 @@ def setup_middleware(app: FastAPI):
     app.add_middleware(
         CORSMiddleware,
         allow_origins=[
-            settings.FRONTEND_URL,
+            "https://suraksh-ai.vercel.app",
             "http://localhost:5173",
-            "http://localhost:3000",
             "*",
         ],
         allow_credentials=True,

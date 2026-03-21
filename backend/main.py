@@ -12,7 +12,7 @@ from api.routes import threats, campaigns, alerts, verify, network, stats
 from ai.classifier import load_classifier
 from ai.deepfake_detector import load_deepfake_model
 from ai.graph_builder import load_graph_from_db
-from ingestion.telegram_scraper import start_telegram_listener, stop_telegram_listener
+# from ingestion.telegram_scraper import start_telegram_listener, stop_telegram_listener
 
 
 @asynccontextmanager
@@ -36,8 +36,8 @@ async def lifespan(app: FastAPI):
     start_scheduler()
     logger.info("Scheduler started")
 
-    asyncio.create_task(start_telegram_listener())
-    logger.info("Telegram listener started")
+    # asyncio.create_task(start_telegram_listener())
+    # logger.info("Telegram listener started")
 
     logger.info(f"SurakshAI ready on port {settings.APP_PORT}")
     logger.info("=" * 50)
@@ -46,7 +46,7 @@ async def lifespan(app: FastAPI):
 
     logger.info("Shutting down SurakshAI...")
     stop_scheduler()
-    await stop_telegram_listener()
+    # await stop_telegram_listener()
     logger.info("Shutdown complete")
 
 
